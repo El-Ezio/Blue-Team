@@ -7,3 +7,8 @@ the fourth one you need to know something first,the first 4 character of the has
   2- -a 3 : meaning Mask attack,meaing I know something about the structure of the password, so don't try completely random possibilities <br>
   3- ?l?l?l?l :lowercase + lowercase + lowercase + lowercase,possible four-character lowercase passwords.<br>
 
+  the command would be somehting like: <br>
+  ```bash
+hashcat -m 3200 -a 3 bcrypt.txt ?l?l?l?
+```
+
