@@ -61,60 +61,8 @@ the last one on Task1 would not be a trouble for you now.
 <br>
 <br>
 
+quiuck tip,better to check this page before the next task (https://hashcat.net/wiki/doku.php?id=example_hashes) <br>
 
-Hashcat Hash Modes — 0–3000
-
-Hashcat uses the -m option to specify the hash type / hash mode.
-
-hashcat -m <MODE> <HASH> <WORDLIST>
-
-Note: Hashcat mode numbers are not sequential. The table below contains the commonly used modes in the 0–3000 range rather than every unused mode number.
-
-Mode	Hash Type
-0	MD5
-10	md5($pass.$salt)
-11	Joomla < 1.5
-12	PostgreSQL
-20	md5($salt.$pass)
-21	osCommerce, xt
-22	Juniper NetScreen/SSG (ScreenOS)
-23	Skype
-24	SolarWinds Orion
-25	WPA-EAPOL-PBKDF2
-30	md5(utf16le($pass))
-40	md5($pass.$salt.$pass)
-50	HMAC-MD5 (key = $pass)
-60	HMAC-MD5 (key = $salt)
-70	md5(utf16le($pass).$salt)
-80	md5($salt.md5($pass))
-90	md4(utf16le($pass))
-100	SHA-1
-110	sha1($pass.$salt)
-120	sha1($salt.$pass)
-130	sha1($salt.$pass.$salt)
-140	sha1($salt.md5($pass))
-150	HMAC-SHA1 (key = $pass)
-160	HMAC-SHA1 (key = $salt)
-170	sha1(utf16le($pass).$salt)
-200	MySQL323
-300	MySQL4.1/MySQL5
-400	phpass, WordPress (MD5), phpBB3
-500	md5crypt, Cisco-IOS $1$
-900	MD4
-1000	NTLM
-1100	Domain Cached Credentials (DCC), MS Cache
-1300	SAP CODVN B
-1400	SHA-256
-1500	descrypt, Traditional DES
-1600	Apache $apr1$
-1700	SHA-512
-1800	sha512crypt, SHA-512 (Unix)
-2000	STDOUT
-2100	Domain Cached Credentials 2 (DCC2), MS Cache 2
-2400	Cisco-PIX (MD5)
-2500	WPA-EAPOL-PBKDF2
-2600	md5(md5($pass))
-3000	L
 
 **Task2**
 
