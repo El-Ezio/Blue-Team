@@ -81,7 +81,7 @@ I also found that Hashcat has different **modes for different hashing algorithms
 
 So I tried -m 1800 as it was close to the format that was given <br>
 
-2-4: ### Password + Salt → Hash
+2-4: Password + Salt → Hash
 
 ```text
 Password: ?
