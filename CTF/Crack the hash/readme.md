@@ -97,7 +97,10 @@ e5d8870e5bdd26602cab8dbe07a942c8669e56d6
 ```
 The exact way the salt is combined depends on the application. It could be: SHA1(password + salt) or SHA1(salt + password) <br>
 
-110 and 120 too left out as we only have salt and hash<br>
+on the table that we saw before,hash modes 110 and 120  left out as we only have salt and hash<br>
+
+<img width="400" height="190" alt="image" src="https://github.com/user-attachments/assets/b7992bd1-77c9-4d2e-8bda-4b392637a313" />
+
 
 so the last option was -m 160.<br>
 
