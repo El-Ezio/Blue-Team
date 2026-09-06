@@ -61,7 +61,7 @@ the last one on Task1 would not be a trouble for you now.
 <br>
 <br>
 
-quiuck tip,better to check this page before the next task [Hashcat](https://hashcat.net/wiki/doku.php?id=example_hashes) <br>
+quick tip,better to check this page before the next task [Hashcat](https://hashcat.net/wiki/doku.php?id=example_hashes) <br>
 
 
 **Task2**😎
