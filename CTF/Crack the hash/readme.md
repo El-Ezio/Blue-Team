@@ -68,16 +68,42 @@ quiuck tip,better to check this page before the next task [Hashcat](https://hash
 
 2-1when you search it on the online tools,not gonna show u the result you want,but maybe if you pay attention,you can find which hash methos is it using <br>
 
-the seond one,After googling a bit, I understood it was NTLM hash.so as the command above,you only need to find the correct number of the mode which is :1000 <br>
+2-2:the seond one,After googling a bit, I understood it was NTLM hash.so as the command above,you only need to find the correct number of the mode which is :1000 <br>
 
 
-2-2 This was a fun one. It helped me understand how **hashes are stored and identified**.
+2-3 This was a fun one. It helped me understand how **hashes are stored and identified**.
 
 The first part of the hash, `$6$`, indicates the hashing algorithm being used. Earlier, in Level 1, Q4, we came across `$2y$`, which is commonly associated with **bcrypt**.
 
 In this case, `$6$` represents **SHA-512 crypt**.
 
 I also found that Hashcat has different **modes for different hashing algorithms**, which you can check out here:https://github.com/unstable-deadlock/brashendeavours.gitbook.io/blob/master/pentesting-cheatsheets/hashcat-hash-modes.md <br>
+
+So I tried -m 1800 as it was close to the format that was given <br>
+
+2-4: ### Password + Salt → Hash
+
+```text
+Password: ?
+Salt:     tryhackme
+
+        Password + "tryhackme"
+                  │
+                  ▼
+                SHA-1
+                  │
+                  ▼
+e5d8870e5bdd26602cab8dbe07a942c8669e56d6
+```
+The exact way the salt is combined depends on the application. It could be: SHA1(password + salt) or SHA1(salt + password) <br>
+
+110 and 120 too left out as we only have salt and hash<br>
+
+so the last option was -m 160.<br>
+
+I hope you enjoy IT.
+
+
 
 
 
