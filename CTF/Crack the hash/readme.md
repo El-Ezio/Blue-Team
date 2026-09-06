@@ -14,37 +14,47 @@ hashcat -m 3200 -a 3 bcrypt.txt ?l?l?l?
 be pacient with the process,it can take some time to give you the result.<br>
 
 Meanwhile lets to a review: <br>
-A password hash is designed to be a one-way function. This means that if we have the hash of a password, we cannot simply reverse the hash to obtain the original password.
+## 🔐 Understanding Password Hashes
 
-Instead, if an attacker obtains a password hash, they can attempt to discover the original password by guessing possible passwords.
+A password hash is designed to be a **one-way function**. This means that if we have the hash of a password, we cannot simply reverse it to obtain the original password.
 
-The process is essentially:
+Instead, if an attacker obtains a password hash, they can attempt to discover the original password by **guessing possible passwords**.
 
-Take a possible password.
-Hash it using the same hashing algorithm.
-Compare the resulting hash with the stolen hash.
-If the hashes match, the guessed password is likely the original password.
-If they don't match, try another candidate.
+### How does it work?
 
-For example:
+The process is:
 
-Candidate password
-        ↓
-     Hash it
-        ↓
-Compare with
-target hash
-        ↓
-   ┌────┴────┐
-   ↓         ↓
- Match     No match
-   ↓         ↓
-Password   Try another
- found     password
+1. Take a possible password.
+2. Hash it using the same hashing algorithm.
+3. Compare the resulting hash with the target hash.
+4. If they match, the password has been found.
+5. If they don't match, try another candidate.
 
-Tools such as Hashcat automate this process by testing large numbers of candidate passwords.
+```mermaid
+flowchart TD
+    A["Candidate Password"] --> B["Hash with Same Algorithm"]
+    B --> C{"Hash Matches Target?"}
+    C -->|Yes| D["Password Found"]
+    C -->|No| E["Try Another Candidate"]
+    E --> A
+```
 
-This is why password strength and slow password-hashing algorithms such as bcrypt are important: the stronger the password and the more computationally expensive the hashing algorithm, the harder it is to successfully guess the original password.
+Tools such as **Hashcat** automate this process by testing large numbers of password candidates.
 
-Important: Hash cracking is not the same as decrypting a password hash. You are not reversing the hash; you are testing guesses until one produces the same hash.
+### Why does password strength matter?
+
+The stronger the password, the larger the number of possible guesses an attacker may need to test.
+
+Password-hashing algorithms such as **bcrypt** are also deliberately computationally expensive, making each password guess slower and therefore making brute-force and dictionary attacks more difficult.
+
+### ⚠️ Hashing ≠ Encryption
+
+Hash cracking is **not the same as decrypting** a password hash.
+
+You are not reversing the hash. Instead, you are:
+
+> **Guessing a password → hashing the guess → comparing it with the target hash.**
+
+If a candidate produces the same hash, you have found a password that corresponds to the target hash.
+
 
