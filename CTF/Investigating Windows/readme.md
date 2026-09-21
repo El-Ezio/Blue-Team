@@ -11,8 +11,9 @@ Lets dig in🪏 <br>
 3) When you find the second answer,you can also find the date  of last login. <br>
 
 4)To this you can search on the local users wndows or if you want to get better at powershell,run the command:
-```b
- Get-LocalGroupMember -Group "Administrators" 
- 
 
-Shows which users and groups have local administrator privileges. ```
+ ```bash
+ Get-LocalGroupMember -Group "Administrators" 
+ ```
+Shows which users and groups have local administrator privilege.
+
