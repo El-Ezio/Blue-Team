@@ -3,3 +3,9 @@ today we are going to do the "Investigating Windows" room on tryhackme,this coul
 As in the description of this room says,there is a infected windows machince and you need to look inside it to understans what hacker did.<br>
 
 Lets dig in🪏 <br>
+
+1) The first one no need to mention it,it can be ezly find out.<br>
+
+2) to this better to check out old friend,"Event viewer" <br>
+
+3) When you find the second answer,you can also find the date  of last login.
