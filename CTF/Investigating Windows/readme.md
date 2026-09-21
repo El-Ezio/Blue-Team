@@ -15,5 +15,18 @@ Lets dig in🪏 <br>
  ```bash
  Get-LocalGroupMember -Group "Administrators" 
  ```
-Shows which users and groups have local administrator privilege.
+Shows which users and groups have local administrator privilege.<br>
+
+5) To see the scheduled Tasks,again on the powershell type: 
+
+ ```bash
+
+ Get-ScheduledTask | Where-Object {$_.TaskPath -eq "\"} 
+ ```
+Lists scheduled tasks located directly in the root of Task Scheduler. 
+
+<img width="706" height="182" alt="image" src="https://github.com/user-attachments/assets/bf2adfeb-6042-4b58-9e30-0aa59e67f6d0" />
+
+
+
 
